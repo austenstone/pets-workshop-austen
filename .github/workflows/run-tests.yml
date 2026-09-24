@@ -76,3 +76,8 @@ jobs:
       - name: Run e2e tests
         working-directory: ./app/client
         run: npx playwright test
+
+  test-reusable:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      deploy-ref: main
