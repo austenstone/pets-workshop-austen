@@ -5,9 +5,6 @@ from app import app  # Changed from relative import to absolute import
 
 # filepath: app/server/test_app.py
 class TestApp(unittest.TestCase):
-    def test_intentional_failure(self):
-        self.fail("Intentional failure to verify the test pipeline")
-
     def setUp(self):
         # Create a test client using Flask's test client
         self.app = app.test_client()
